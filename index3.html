@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="back2.css">
+    <title>Product Card</title>
+</head>
+<body>
+
+<div class="product-card">
+    <div class="product-image">
+        <img src="https://imgs.search.brave.com/aKUtqk595nHehMf3v1RpuQCQ01Ph1ANzMW50dH3SizU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/ODFJNG5rSXZoZkwu/anBn" alt="Product Image" class="product-image"" alt="Product Image">
+    </div>
+    <div class="product-info">
+        <h2 class="product-name">Product Name</h2>
+        <p class="product-price" id="price">Price: $99.99</p>
+        <input type="number" id="quantity" placeholder="Enter quantity" min="1">
+        <p class="total-price" id="total-price">Total Price: $0.00</p>
+        <button class="buy-now" onclick="calculateTotal()">Buy Now</button>
+    </div>
+</div>
+
+<script>
+    const price = 99.99; // Product price
+
+    function calculateTotal() {
+        const quantity = parseInt(document.getElementById("quantity").value) || 0;
+        const totalPrice = quantity * price;
+        document.getElementById("total-price").innerText = `Total Price: $${totalPrice.toFixed(2)}`;
+
+        // Show confirmation alert
+        if (quantity > 0) {
+            alert(`You added ${quantity} items to your cart for $${totalPrice.toFixed(2)}`);
+        } else {
+            alert("Please enter a valid quantity.");
+        }
+    }
+</script>
+
+</body>
+</html>

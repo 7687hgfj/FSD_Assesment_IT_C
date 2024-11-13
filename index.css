@@ -1,0 +1,112 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+  }
+  
+  /* Styling the product box */
+  .product-box {
+    width: 350px; /* Adjusted width */
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s;
+    margin: 20px; /* Added margin to create space around the box */
+  }
+  
+  /* Add some space inside the box */
+  .product-details {
+    padding: 20px; /* Added internal padding to create space around the contents */
+  }
+  
+  .product-box:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Product image styling */
+  .product-image {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #eee;
+  }
+  
+  /* Product name, description, price, and quantity styling */
+  .product-name {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .product-description {
+    font-size: 1em;
+    color: #777;
+    margin-bottom: 10px;
+  }
+  
+  .product-price {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #e74c3c;
+    margin-bottom: 20px;
+  }
+  
+  .quantity-selector {
+    margin-bottom: 20px;
+  }
+  
+  .quantity-selector input {
+    width: 60px;
+    padding: 5px;
+    text-align: center;
+    font-size: 1.2em;
+  }
+  
+  /* Buy button styling */
+  .buy-btn {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+  }
+  
+  .buy-btn:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 480px) {
+    .product-box {
+      width: 90%;
+      margin: 10px;
+    }
+  
+    .product-name {
+      font-size: 1.2em;
+    }
+  
+    .product-price {
+      font-size: 1em;
+    }
+  
+    .buy-btn {
+      font-size: 1em;
+    }
+  }
